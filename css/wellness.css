@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Enriqueta&family=Fredoka+One&family=Luckiest+Guy&family=Paytone+One&family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: beige;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+}
+
+.navbar {
+  background-color: teal;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: "Fredoka One", cursive;
+}
+.navbar span {
+  color: orange;
+}
+
+.navbar-link {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 40%;
+}
+
+.navbar-link li a {
+  color: #fff1ff;
+  font-size: 1rem;
+}
+
+.navbar-link li a:hover {
+  color: orange;
+  border-bottom: 3px solid orange;
+}
+
+/* MAIN */
+
+.main {
+  width: 90%;
+  margin: 100px auto auto auto;
+}
+
+.main-header {
+  font-family: "Enriqueta", serif;
+  font-size: 3.8rem;
+  margin-bottom: 5px;
+  padding: 5px 0;
+}
+
+.main-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-areas:
+    "art-text1 art-photo art-photo"
+    "art-text1 art-text2 art-text3";
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.art-photo {
+  width: 100%;
+  grid-area: art-photo;
+  margin: auto;
+  padding: 10px;
+}
+
+.art-photo img {
+  margin: auto;
+  width: 90%;
+}
+
+.art-text1 {
+  grid-area: art-text1;
+}
+.art-text2 {
+  grid-area: art-text2;
+}
+
+.art-text3 {
+  grid-area: art-text3;
+}
+
+.art-text1 > div,
+.art-text2 > div,
+.art-text3 div {
+  padding: 5px;
+}
+
+.art-text1 > div h1,
+.art-text2 > div h1,
+.art-text3 > div h1 {
+  font-size: 3rem;
+  font-family: "Paytone One", sans-serif;
+  color: orange;
+  float: left;
+}
+
+.art-text1 > div h2,
+.art-text2 > div h2,
+.art-text3 > div h2 {
+  padding-top: 10px;
+  color: orange;
+}
+
+.art-text1 > div > p,
+.art-text2 > div p,
+.art-text3 > div p {
+  line-height: 1.4;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #404040;
+  color: #fff1ff;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding: 5px;
+}
+
+.social {
+  padding: 5px;
+  background-color: #404040;
+  display: flex;
+  justify-content: center;
+}
+
+.footer i {
+  font-size: 1.3rem;
+  padding: 0 5px;
+  color: #fff1ff;
+}
+
+.hidden {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .navbar-link {
+    width: 50%;
+  }
+
+  .main-header {
+    margin-top: -10px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .navbar-link {
+    position: fixed;
+    left: -100%;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: teal;
+    width: 50%;
+    transition: 0.4s;
+    height: 92vh;
+    border-top-right-radius: 35%;
+    border-bottom-right-radius: 75%;
+  }
+
+  .navbar-link.active {
+    left: 0;
+  }
+
+  .navbar-link li {
+    padding: 20px;
+  }
+
+  .navbar-link li a {
+    color: #fff1ff;
+    font-size: 1.2rem;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: block;
+    font-size: 0.8rem;
+    color: #fff1ff;
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "art-photo"
+      "art-text1"
+      "art-text2"
+      "art-text3";
+  }
+
+  .main-header {
+    margin-top: -10px;
+    line-height: 1.1;
+  }
+  .art-photo {
+    grid-area: art-photo;
+  }
+  .art-photo img {
+    width: 100%;
+  }
+  .art-text1 {
+    font-size: 1.1rem;
+    grid-area: art-text1;
+  }
+
+  .art-text2 {
+    font-size: 1.1rem;
+    grid-area: art-text2;
+  }
+  .art-text3 {
+    font-size: 1.1rem;
+    grid-area: art-text3;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .art-text1 > div,
+  .art-text2 > div,
+  .art-text3 > div {
+    margin: auto;
+    width: 95%;
+  }
+
+  .art-text1 > div > p,
+  .art-text2 > div p,
+  .art-text3 > div p {
+    line-height: 1.1;
+  }
+}
